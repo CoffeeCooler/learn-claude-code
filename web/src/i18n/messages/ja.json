@@ -1,7 +1,25 @@
 {
   "meta": { "title": "Learn Claude Code", "description": "0 から 1 へ nano Claude Code-like agent を構築し、毎回 1 つの仕組みを追加" },
   "nav": { "home": "ホーム", "timeline": "学習パス", "compare": "バージョン比較", "layers": "アーキテクチャ層", "github": "GitHub" },
-  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "0 から 1 へ nano Claude Code-like agent を構築し、毎回 1 つの仕組みを追加", "start": "学習を始める", "core_pattern": "コアパターン", "core_pattern_desc": "すべての AI コーディングエージェントは同じループを共有する：モデルを呼び出し、ツールを実行し、結果を返す。実運用ではこの上にポリシー、権限、ライフサイクル層が重なる。", "learning_path": "学習パス", "learning_path_desc": "12の段階的セッション、シンプルなループから分離された自律実行まで", "layers_title": "アーキテクチャ層", "layers_desc": "5つの直交する関心事が完全なエージェントを構成", "loc": "行", "learn_more": "詳細を見る", "versions_in_layer": "バージョン", "message_flow": "メッセージの増加", "message_flow_desc": "エージェントループ実行時のメッセージ配列の成長を観察" },
+  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "0 から 1 へ nano Claude Code-like agent を構築し、毎回 1 つの仕組みを追加", "start": "学習を始める", "core_pattern": "コアパターン", "core_pattern_desc": "すべての AI コーディングエージェントは同じループを共有する：モデルを呼び出し、ツールを実行し、結果を返す。実運用ではこの上にポリシー、権限、ライフサイクル層が重なる。", "learning_path": "学習パス", "learning_path_desc": "12 の段階的セッション、シンプルなループから分離された自律実行まで", "layers_title": "アーキテクチャ層", "layers_desc": "5 つの直交する関心事が完全なエージェントを構成", "loc": "行", "learn_more": "詳細を見る", "versions_in_layer": "バージョン", "message_flow": "メッセージの増加", "message_flow_desc": "エージェントループ実行時のメッセージ配列の成長を観察", "knowledge_graph_title": "ナレッジグラフ", "knowledge_graph_desc": "12 セッションの学習の旅の視覚的表現", "knowledge_graph_axis": "学習の進行", "knowledge_graph_center": "エージェントコア", "knowledge_graph_sessions": "セッション", "knowledge_graph_click_hint": "ノードをクリックして詳細を表示" },
+  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "0 から 1 へ nano Claude Code-like agent を構築し、毎回 1 つの仕組みを追加", "start": "学習を始める", "core_pattern": "コアパターン", "core_pattern_desc": "すべての AI コーディングエージェントは同じループを共有する：モデルを呼び出し、ツールを実行し、結果を返す。実運用ではこの上にポリシー、権限、ライフサイクル層が重なる。", "learning_path": "学習パス", "learning_path_desc": "12 の段階的セッション、シンプルなループから分離された自律実行まで", "layers_title": "アーキテクチャ層", "layers_desc": "5 つの直交する関心事が完全なエージェントを構成", "loc": "行", "learn_more": "詳細を見る", "versions_in_layer": "バージョン", "message_flow": "メッセージの増加", "message_flow_desc": "エージェントループ実行時のメッセージ配列の成長を観察", "knowledge_graph_title": "ナレッジグラフ", "knowledge_graph_desc": "12 セッションの学習の旅の視覚的表現", "knowledge_graph_axis": "学習の進行", "knowledge_graph_center": "エージェントコア", "knowledge_graph_sessions": "セッション", "knowledge_graph_click_hint": "ノードをクリックして詳細を表示",
+    "your_progress": "進捗",
+    "completed": "完了",
+    "remaining": "残り",
+    "progress": "進行率",
+    "achievements": "実績",
+    "achievements_sub": "進行に応じてバッジをアンロック",
+    "achievements": {
+      "first_step": { "title": "最初の一歩", "description": "最初のセッションを完了する" },
+      "tools_master": { "title": "ツールマスター", "description": "ツール層 (s01-s02) を完了する" },
+      "planner": { "title": "プランナー", "description": "計画層 (s03-s05, s07) を完了する" },
+      "memory_keeper": { "title": "メモリキーパー", "description": "メモリ層 (s06) を完了する" },
+      "team_player": { "title": "チームプレイヤー", "description": "コラボレーション層 (s09-s12) を完了する" },
+      "halfway": { "title": "折り返し", "description": "6 セッションを完了する" },
+      "scholar": { "title": "スカラー", "description": "全 12 セッションを完了する" },
+      "legend": { "title": "エージェント伝説", "description": "ハーネスエンジニアリングの旅を制覇する" }
+    }
+  },
   "version": { "loc": "行のコード", "tools": "ツール", "new": "新規", "prev": "前のバージョン", "next": "次のバージョン", "view_source": "ソースを見る", "view_diff": "差分を見る", "design_decisions": "設計判断", "whats_new": "新機能", "tutorial": "チュートリアル", "simulator": "エージェントループシミュレーター", "execution_flow": "実行フロー", "architecture": "アーキテクチャ", "concept_viz": "コンセプト可視化", "alternatives": "検討された代替案", "tab_learn": "学習", "tab_simulate": "シミュレーション", "tab_code": "ソースコード", "tab_deep_dive": "詳細分析" },
   "sim": { "play": "再生", "pause": "一時停止", "step": "ステップ", "reset": "リセット", "speed": "速度", "step_of": "/" },
   "timeline": { "title": "学習パス", "subtitle": "s01からs12へ：段階的エージェント設計", "layer_legend": "レイヤー凡例", "loc_growth": "コード量の推移", "learn_more": "詳細を見る" },
@@ -13,8 +31,11 @@
     "memory": "コンテキスト制限内での記憶保持。圧縮戦略によりエージェントが一貫性を失わずに無限に作業可能。",
     "concurrency": "ノンブロッキング実行。バックグラウンドスレッドと通知バスによる並列作業。",
     "collaboration": "マルチエージェント連携。チーム、メッセージング、自律的に考えるチームメイト。"
-  },
-  "compare": {
+  },  "layers.tools.label": "ツールと実行",
+  "layers.planning.label": "計画と調整",
+  "layers.memory.label": "メモリ管理",
+  "layers.concurrency.label": "並行処理",
+  "layers.collaboration.label": "コラボレーション",  "compare": {
     "title": "バージョン比較",
     "subtitle": "任意の2つのバージョン間の変更を確認",
     "select_a": "バージョンA",

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "@/lib/i18n";
 import { Github, Menu, X, Sun, Moon } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -24,14 +24,19 @@ export function Header() {
   const pathname = usePathname();
   const locale = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dark, setDark] = useState(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("theme");
-      if (stored) return stored === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [dark, setDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Only access localStorage and theme after mount to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+    const stored = localStorage.getItem("theme");
+    if (stored) {
+      setDark(stored === "dark");
+    } else {
+      setDark(window.matchMedia("(prefers-color-scheme: dark)").matches);
     }
-    return false;
-  });
+  }, []);
 
   function toggleDark() {
     const next = !dark;
@@ -90,8 +95,13 @@ export function Header() {
           <button
             onClick={toggleDark}
             className="rounded-md p-1.5 text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-white"
+            aria-label="Toggle dark mode"
           >
-            {dark ? <Sun size={16} /> : <Moon size={16} />}
+            {!mounted ? (
+              <Moon size={16} />
+            ) : (
+              dark ? <Sun size={16} /> : <Moon size={16} />
+            )}
           </button>
 
           <a

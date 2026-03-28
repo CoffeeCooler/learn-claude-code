@@ -1,7 +1,25 @@
 {
   "meta": { "title": "Learn Claude Code", "description": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制" },
   "nav": { "home": "首页", "timeline": "学习路径", "compare": "版本对比", "layers": "架构层", "github": "GitHub" },
-  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制", "start": "开始学习", "core_pattern": "核心模式", "core_pattern_desc": "所有 AI 编程 Agent 共享同一个循环：调用模型、执行工具、回传结果。生产级系统会在其上叠加策略、权限和生命周期层。", "learning_path": "学习路径", "learning_path_desc": "12 个渐进式课程，从简单循环到隔离化自治执行", "layers_title": "架构层次", "layers_desc": "五个正交关注点组合成完整的 Agent", "loc": "行", "learn_more": "了解更多", "versions_in_layer": "个版本", "message_flow": "消息增长", "message_flow_desc": "观察 Agent 循环执行时消息数组的增长" },
+  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制", "start": "开始学习", "core_pattern": "核心模式", "core_pattern_desc": "所有 AI 编程 Agent 共享同一个循环：调用模型、执行工具、回传结果。生产级系统会在其上叠加策略、权限和生命周期层。", "learning_path": "学习路径", "learning_path_desc": "12 个渐进式课程，从简单循环到隔离化自治执行", "layers_title": "架构层次", "layers_desc": "五个正交关注点组合成完整的 Agent", "loc": "行", "learn_more": "了解更多", "versions_in_layer": "个版本", "message_flow": "消息增长", "message_flow_desc": "观察 Agent 循环执行时消息数组的增长", "knowledge_graph_title": "知识图谱", "knowledge_graph_desc": "12 个课程学习之旅的可视化呈现", "knowledge_graph_axis": "学习进程", "knowledge_graph_center": "Agent 核心", "knowledge_graph_sessions": "个课程", "knowledge_graph_click_hint": "点击节点查看详情" },
+  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制", "start": "开始学习", "core_pattern": "核心模式", "core_pattern_desc": "所有 AI 编程 Agent 共享同一个循环：调用模型、执行工具、回传结果。生产级系统会在其上叠加策略、权限和生命周期层。", "learning_path": "学习路径", "learning_path_desc": "12 个渐进式课程，从简单循环到隔离化自治执行", "layers_title": "架构层次", "layers_desc": "五个正交关注点组合成完整的 Agent", "loc": "行", "learn_more": "了解更多", "versions_in_layer": "个版本", "message_flow": "消息增长", "message_flow_desc": "观察 Agent 循环执行时消息数组的增长", "knowledge_graph_title": "知识图谱", "knowledge_graph_desc": "12 个课程学习之旅的可视化呈现", "knowledge_graph_axis": "学习进程", "knowledge_graph_center": "Agent 核心", "knowledge_graph_sessions": "个课程", "knowledge_graph_click_hint": "点击节点查看详情",
+    "your_progress": "你的进度",
+    "completed": "已完成",
+    "remaining": "剩余",
+    "progress": "进度",
+    "achievements": "成就",
+    "achievements_sub": "随着进度解锁徽章",
+    "achievements": {
+      "first_step": { "title": "首次踏出", "description": "完成第一个课程" },
+      "tools_master": { "title": "工具大师", "description": "完成工具层 (s01-s02)" },
+      "planner": { "title": "规划达人", "description": "完成规划层 (s03-s05, s07)" },
+      "memory_keeper": { "title": "记忆守护者", "description": "完成记忆层 (s06)" },
+      "team_player": { "title": "团队合作者", "description": "完成协作层 (s09-s12)" },
+      "halfway": { "title": "已过半", "description": "完成 6 个课程" },
+      "scholar": { "title": "学者", "description": "完成全部 12 个课程" },
+      "legend": { "title": "Agent 传奇", "description": "掌握整个 harness 工程旅程" }
+    }
+  },
   "version": { "loc": "行代码", "tools": "个工具", "new": "新增", "prev": "上一版", "next": "下一版", "view_source": "查看源码", "view_diff": "查看变更", "design_decisions": "设计决策", "whats_new": "新增内容", "tutorial": "教程", "simulator": "Agent 循环模拟器", "execution_flow": "执行流程", "architecture": "架构", "concept_viz": "概念可视化", "alternatives": "替代方案", "tab_learn": "学习", "tab_simulate": "模拟", "tab_code": "源码", "tab_deep_dive": "深入探索" },
   "sim": { "play": "播放", "pause": "暂停", "step": "单步", "reset": "重置", "speed": "速度", "step_of": "/" },
   "timeline": { "title": "学习路径", "subtitle": "s01 到 s12：渐进式 Agent 设计", "layer_legend": "层次图例", "loc_growth": "代码量增长", "learn_more": "了解更多" },
@@ -14,6 +32,11 @@
     "concurrency": "非阻塞执行。后台线程和通知总线实现并行工作。",
     "collaboration": "多 Agent 协作。团队、消息传递和能独立思考的自主队友。"
   },
+  "layers.tools.label": "工具与执行",
+  "layers.planning.label": "规划与协调",
+  "layers.memory.label": "内存管理",
+  "layers.concurrency.label": "并发",
+  "layers.collaboration.label": "协作",
   "compare": {
     "title": "版本对比",
     "subtitle": "查看任意两个版本之间的变化",

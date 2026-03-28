@@ -27,7 +27,35 @@ export function useTranslations(namespace?: string) {
   return (key: string) => {
     const ns = namespace ? (messages as any)[namespace] : messages;
     if (!ns) return key;
-    return (ns as any)[key] || key;
+
+    // Support nested dotted keys by walking the object
+    if (typeof key === "string" && key.includes(".")) {
+      const parts = key.split('.');
+      let cur: any = ns;
+      for (const p of parts) {
+        if (cur == null) return key;
+        cur = cur[p];
+      }
+      if (cur != null) return cur;
+    }
+
+    // 1) direct lookup on namespace object
+    const direct = (ns as any)[key];
+    if (direct) return direct;
+
+    // 2) flattened dotted lookup: messages["namespace.key"]
+    if (namespace) {
+      const flat = (messages as any)[`${namespace}.${key}`];
+      if (flat) return flat;
+    }
+
+    // 3) if no namespace, support dotted key lookup across root
+    if (!namespace && typeof key === "string") {
+      const dotted = (messages as any)[key];
+      if (dotted) return dotted;
+    }
+
+    return key;
   };
 }
 

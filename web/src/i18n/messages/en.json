@@ -1,7 +1,24 @@
 {
   "meta": { "title": "Learn Claude Code", "description": "Build a nano Claude Code-like agent from 0 to 1, one mechanism at a time" },
   "nav": { "home": "Home", "timeline": "Timeline", "compare": "Compare", "layers": "Layers", "github": "GitHub" },
-  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "Build a nano Claude Code-like agent from 0 to 1, one mechanism at a time", "start": "Start Learning", "core_pattern": "The Core Pattern", "core_pattern_desc": "Every AI coding agent shares the same loop: call the model, execute tools, feed results back. Production systems add policy, permissions, and lifecycle layers on top.", "learning_path": "Learning Path", "learning_path_desc": "12 progressive sessions, from a simple loop to isolated autonomous execution", "layers_title": "Architectural Layers", "layers_desc": "Five orthogonal concerns that compose into a complete agent", "loc": "LOC", "learn_more": "Learn More", "versions_in_layer": "versions", "message_flow": "Message Growth", "message_flow_desc": "Watch the messages array grow as the agent loop executes" },
+  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "Build a nano Claude Code-like agent from 0 to 1, one mechanism at a time", "start": "Start Learning", "core_pattern": "The Core Pattern", "core_pattern_desc": "Every AI coding agent shares the same loop: call the model, execute tools, feed results back. Production systems add policy, permissions, and lifecycle layers on top.", "learning_path": "Learning Path", "learning_path_desc": "12 progressive sessions, from a simple loop to isolated autonomous execution", "layers_title": "Architectural Layers", "layers_desc": "Five orthogonal concerns that compose into a complete agent", "loc": "LOC", "learn_more": "Learn More", "versions_in_layer": "versions", "message_flow": "Message Growth", "message_flow_desc": "Watch the messages array grow as the agent loop executes", "knowledge_graph_title": "Knowledge Graph", "knowledge_graph_desc": "Visual representation of the 12-session learning journey", "knowledge_graph_axis": "Learning Progression", "knowledge_graph_center": "Agent Core", "knowledge_graph_sessions": "sessions", "knowledge_graph_click_hint": "Click nodes for details",
+    "your_progress": "Your Progress",
+    "completed": "Completed",
+    "remaining": "Remaining",
+    "progress": "Progress",
+    "achievements": "Achievements",
+    "achievements_sub": "Unlock badges as you progress",
+    "achievements": {
+      "first_step": { "title": "First Step", "description": "Complete your first session" },
+      "tools_master": { "title": "Tools Master", "description": "Complete the Tools layer (s01-s02)" },
+      "planner": { "title": "Master Planner", "description": "Complete the Planning layer (s03-s05, s07)" },
+      "memory_keeper": { "title": "Memory Keeper", "description": "Complete the Memory layer (s06)" },
+      "team_player": { "title": "Team Player", "description": "Complete the Collaboration layer (s09-s12)" },
+      "halfway": { "title": "Halfway There", "description": "Complete 6 sessions" },
+      "scholar": { "title": "Scholar", "description": "Complete all 12 sessions" },
+      "legend": { "title": "Agent Legend", "description": "Master the entire harness engineering journey" }
+    }
+  },
   "version": { "loc": "lines of code", "tools": "tools", "new": "New", "prev": "Previous", "next": "Next", "view_source": "View Source", "view_diff": "View Diff", "design_decisions": "Design Decisions", "whats_new": "What's New", "tutorial": "Tutorial", "simulator": "Agent Loop Simulator", "execution_flow": "Execution Flow", "architecture": "Architecture", "concept_viz": "Concept Visualization", "alternatives": "Alternatives Considered", "tab_learn": "Learn", "tab_simulate": "Simulate", "tab_code": "Code", "tab_deep_dive": "Deep Dive" },
   "sim": { "play": "Play", "pause": "Pause", "step": "Step", "reset": "Reset", "speed": "Speed", "step_of": "of" },
   "timeline": { "title": "Learning Path", "subtitle": "s01 to s12: Progressive Agent Design", "layer_legend": "Layer Legend", "loc_growth": "LOC Growth", "learn_more": "Learn More" },
@@ -14,6 +31,11 @@
     "concurrency": "Non-blocking execution. Background threads and notification buses for parallel work.",
     "collaboration": "Multi-agent coordination. Teams, messaging, and autonomous teammates that think for themselves."
   },
+  "layers.tools.label": "Tools & Execution",
+  "layers.planning.label": "Planning & Coordination",
+  "layers.memory.label": "Memory Management",
+  "layers.concurrency.label": "Concurrency",
+  "layers.collaboration.label": "Collaboration",
   "compare": {
     "title": "Compare Versions",
     "subtitle": "See what changed between any two versions",

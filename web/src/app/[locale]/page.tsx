@@ -8,6 +8,11 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import versionsData from "@/data/generated/versions.json";
 import { MessageFlow } from "@/components/architecture/message-flow";
+import { HeroSection } from "@/components/home/hero-section";
+import { ProgressTracker } from "@/components/home/progress-tracker";
+import { KnowledgeGraph } from "@/components/home/knowledge-graph";
+import { Achievements } from "@/components/home/achievements";
+import { VerticalAxis } from "@/components/home/vertical-axis";
 
 const LAYER_DOT_COLORS: Record<string, string> = {
   tools: "bg-blue-500",
@@ -42,28 +47,16 @@ export default function HomePage() {
   const locale = useLocale();
 
   return (
-    <div className="flex flex-col gap-20 pb-16">
-      {/* Hero Section */}
-      <section className="flex flex-col items-center px-2 pt-8 text-center sm:pt-20">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-          {t("hero_title")}
-        </h1>
-        <p className="mt-4 max-w-2xl text-base text-[var(--color-text-secondary)] sm:text-xl">
-          {t("hero_subtitle")}
-        </p>
-        <div className="mt-8">
-          <Link
-            href={`/${locale}/timeline`}
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-zinc-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
-          >
-            {t("start")}
-            <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
-      </section>
+    <div className="flex flex-col gap-20 pb-16 md:pl-28">
+      {/* Enhanced Hero Section */}
+      <HeroSection
+        title={t("hero_title")}
+        subtitle={t("hero_subtitle")}
+        startLabel={t("start")}
+      />
 
       {/* Core Pattern Section */}
-      <section>
+      <section id="core-pattern" style={{ scrollMarginTop: "6rem" }}>
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold sm:text-3xl">{t("core_pattern")}</h2>
           <p className="mt-2 text-[var(--color-text-secondary)]">
@@ -125,8 +118,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Knowledge Graph */}
+      <section id="knowledge-graph" className="px-2" style={{ scrollMarginTop: "6rem" }}>
+        <KnowledgeGraph />
+      </section>
+
       {/* Message Flow Visualization */}
-      <section>
+      <section id="message-flow" style={{ scrollMarginTop: "6rem" }}>
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold sm:text-3xl">{t("message_flow")}</h2>
           <p className="mt-2 text-[var(--color-text-secondary)]">
@@ -139,7 +137,7 @@ export default function HomePage() {
       </section>
 
       {/* Learning Path Preview */}
-      <section>
+      <section id="learning-path" style={{ scrollMarginTop: "6rem" }}>
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold sm:text-3xl">{t("learning_path")}</h2>
           <p className="mt-2 text-[var(--color-text-secondary)]">
@@ -183,7 +181,7 @@ export default function HomePage() {
       </section>
 
       {/* Layer Overview */}
-      <section>
+      <section id="layers" style={{ scrollMarginTop: "6rem" }}>
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold sm:text-3xl">{t("layers_title")}</h2>
           <p className="mt-2 text-[var(--color-text-secondary)]">
@@ -228,6 +226,17 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Vertical Positioning Axis - Independent component after Layer Overview */}
+      <section className="px-2">
+        <VerticalAxis />
+      </section>
+
+      {/* Progress & Achievements Grid - After core content sections */}
+      <section id="progress" className="grid grid-cols-1 gap-6 px-2 lg:grid-cols-2" style={{ scrollMarginTop: "6rem" }}>
+        <ProgressTracker />
+        <Achievements />
       </section>
     </div>
   );
