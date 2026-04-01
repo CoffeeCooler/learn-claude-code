@@ -9,9 +9,7 @@ import { cn } from "@/lib/utils";
 import versionsData from "@/data/generated/versions.json";
 import { MessageFlow } from "@/components/architecture/message-flow";
 import { HeroSection } from "@/components/home/hero-section";
-import { ProgressTracker } from "@/components/home/progress-tracker";
-import { KnowledgeGraph } from "@/components/home/knowledge-graph";
-import { Achievements } from "@/components/home/achievements";
+// Removed KnowledgeGraph, ProgressTracker, Achievements per spec
 import { VerticalAxis } from "@/components/home/vertical-axis";
 
 const LAYER_DOT_COLORS: Record<string, string> = {
@@ -44,6 +42,7 @@ function getVersionData(id: string) {
 
 export default function HomePage() {
   const t = useTranslations("home");
+  const layersT = useTranslations("layers");
   const locale = useLocale();
 
   return (
@@ -118,10 +117,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Knowledge Graph */}
-      <section id="knowledge-graph" className="px-2" style={{ scrollMarginTop: "6rem" }}>
-        <KnowledgeGraph />
-      </section>
+      {/* Knowledge Graph removed */}
 
       {/* Message Flow Visualization */}
       <section id="message-flow" style={{ scrollMarginTop: "6rem" }}>
@@ -202,7 +198,7 @@ export default function HomePage() {
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-sm font-semibold">{layer.label}</h3>
+                  <h3 className="text-sm font-semibold">{layersT(`${layer.id}.label`)}</h3>
                   <span className="text-xs text-[var(--color-text-secondary)]">
                     {layer.versions.length} {t("versions_in_layer")}
                   </span>
@@ -234,10 +230,7 @@ export default function HomePage() {
       </section>
 
       {/* Progress & Achievements Grid - After core content sections */}
-      <section id="progress" className="grid grid-cols-1 gap-6 px-2 lg:grid-cols-2" style={{ scrollMarginTop: "6rem" }}>
-        <ProgressTracker />
-        <Achievements />
-      </section>
+      {/* Progress section removed per request */}
     </div>
   );
 }

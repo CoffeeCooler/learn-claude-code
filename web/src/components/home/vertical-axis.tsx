@@ -18,11 +18,10 @@ export function VerticalAxis() {
 
   const items = [
     { id: "core-pattern", label: homeT("core_pattern") || "Core Pattern" },
-    { id: "knowledge-graph", label: homeT("knowledge_graph_title") || "Knowledge Graph" },
+    // Knowledge Graph, Progress sections removed per request
     { id: "message-flow", label: homeT("message_flow") || "Message Growth" },
     { id: "learning-path", label: homeT("learning_path") || "Learning Path" },
     { id: "layers", label: homeT("layers_title") || "Architectural Layers" },
-    { id: "progress", label: homeT("your_progress") || "Your Progress" },
   ];
 
   useEffect(() => {

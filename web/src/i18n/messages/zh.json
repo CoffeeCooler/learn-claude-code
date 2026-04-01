@@ -1,8 +1,23 @@
 {
   "meta": { "title": "Learn Claude Code", "description": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制" },
   "nav": { "home": "首页", "timeline": "学习路径", "compare": "版本对比", "layers": "架构层", "github": "GitHub" },
-  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制", "start": "开始学习", "core_pattern": "核心模式", "core_pattern_desc": "所有 AI 编程 Agent 共享同一个循环：调用模型、执行工具、回传结果。生产级系统会在其上叠加策略、权限和生命周期层。", "learning_path": "学习路径", "learning_path_desc": "12 个渐进式课程，从简单循环到隔离化自治执行", "layers_title": "架构层次", "layers_desc": "五个正交关注点组合成完整的 Agent", "loc": "行", "learn_more": "了解更多", "versions_in_layer": "个版本", "message_flow": "消息增长", "message_flow_desc": "观察 Agent 循环执行时消息数组的增长", "knowledge_graph_title": "知识图谱", "knowledge_graph_desc": "12 个课程学习之旅的可视化呈现", "knowledge_graph_axis": "学习进程", "knowledge_graph_center": "Agent 核心", "knowledge_graph_sessions": "个课程", "knowledge_graph_click_hint": "点击节点查看详情" },
-  "home": { "hero_title": "Learn Claude Code", "hero_subtitle": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制", "start": "开始学习", "core_pattern": "核心模式", "core_pattern_desc": "所有 AI 编程 Agent 共享同一个循环：调用模型、执行工具、回传结果。生产级系统会在其上叠加策略、权限和生命周期层。", "learning_path": "学习路径", "learning_path_desc": "12 个渐进式课程，从简单循环到隔离化自治执行", "layers_title": "架构层次", "layers_desc": "五个正交关注点组合成完整的 Agent", "loc": "行", "learn_more": "了解更多", "versions_in_layer": "个版本", "message_flow": "消息增长", "message_flow_desc": "观察 Agent 循环执行时消息数组的增长", "knowledge_graph_title": "知识图谱", "knowledge_graph_desc": "12 个课程学习之旅的可视化呈现", "knowledge_graph_axis": "学习进程", "knowledge_graph_center": "Agent 核心", "knowledge_graph_sessions": "个课程", "knowledge_graph_click_hint": "点击节点查看详情",
+  "home": {
+    "hero_title": "Learn Claude Code",
+    "hero_subtitle": "从 0 到 1 构建 nano Claude Code-like agent，每次只加一个机制",
+    "start": "开始学习",
+    "core_pattern": "核心模式",
+    "core_pattern_desc": "所有 AI 编程 Agent 共享同一个循环：调用模型、执行工具、回传结果。生产级系统会在其上叠加策略、权限和生命周期层。",
+    "learning_path": "学习路径",
+    "learning_path_desc": "12 个渐进式课程，从简单循环到隔离化自治执行",
+    "layers_title": "架构层次",
+    "layers_desc": "五个正交关注点组合成完整的 Agent",
+    "loc": "行",
+    "learn_more": "了解更多",
+    "versions_in_layer": "个版本",
+    "message_flow": "消息增长",
+    "message_flow_desc": "观察 Agent 循环执行时消息数组的增长",
+    "knowledge_graph_title": "知识图谱",
+    "knowledge_graph_desc": "12 个课程学习之旅的可视化呈现",
     "your_progress": "你的进度",
     "completed": "已完成",
     "remaining": "剩余",
@@ -26,17 +41,12 @@
   "layers": {
     "title": "架构层次",
     "subtitle": "五个正交关注点组合成完整的 Agent",
-    "tools": "Agent 能做什么。基础层：工具赋予模型与外部世界交互的能力。",
-    "planning": "如何组织工作。从简单的待办列表到跨 Agent 共享的依赖感知任务板。",
-    "memory": "在上下文限制内保持记忆。压缩策略让 Agent 可以无限工作而不失去连贯性。",
-    "concurrency": "非阻塞执行。后台线程和通知总线实现并行工作。",
-    "collaboration": "多 Agent 协作。团队、消息传递和能独立思考的自主队友。"
+    "tools": { "label": "工具与执行", "desc": "Agent 能做什么。基础层：工具赋予模型与外部世界交互的能力。" },
+    "planning": { "label": "规划与协调", "desc": "如何组织工作。从简单的待办列表到跨 Agent 共享的依赖感知任务板。" },
+    "memory": { "label": "内存管理", "desc": "在上下文限制内保持记忆。压缩策略让 Agent 可以无限工作而不失去连贯性。" },
+    "concurrency": { "label": "并发", "desc": "非阻塞执行。后台线程和通知总线实现并行工作。" },
+    "collaboration": { "label": "协作", "desc": "多 Agent 协作。团队、消息传递和能独立思考的自主队友。" }
   },
-  "layers.tools.label": "工具与执行",
-  "layers.planning.label": "规划与协调",
-  "layers.memory.label": "内存管理",
-  "layers.concurrency.label": "并发",
-  "layers.collaboration.label": "协作",
   "compare": {
     "title": "版本对比",
     "subtitle": "查看任意两个版本之间的变化",
@@ -74,13 +84,6 @@
     "s10": "团队协议",
     "s11": "自主 Agent",
     "s12": "Worktree + 任务隔离"
-  },
-  "layer_labels": {
-    "tools": "工具与执行",
-    "planning": "规划与协调",
-    "memory": "内存管理",
-    "concurrency": "并发",
-    "collaboration": "协作"
   },
   "viz": {
     "s01": "Agent While 循环",

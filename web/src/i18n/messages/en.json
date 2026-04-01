@@ -25,17 +25,19 @@
   "layers": {
     "title": "Architectural Layers",
     "subtitle": "Five orthogonal concerns that compose into a complete agent",
-    "tools": "What the agent CAN do. The foundation: tools give the model capabilities to interact with the world.",
-    "planning": "How work is organized. From simple todo lists to dependency-aware task boards shared across agents.",
-    "memory": "Keeping context within limits. Compression strategies that let agents work infinitely without losing coherence.",
-    "concurrency": "Non-blocking execution. Background threads and notification buses for parallel work.",
-    "collaboration": "Multi-agent coordination. Teams, messaging, and autonomous teammates that think for themselves."
+    "tools": { "label": "Tools & Execution", "desc": "What the agent CAN do. The foundation: tools give the model capabilities to interact with the world." },
+    "planning": { "label": "Planning & Coordination", "desc": "How work is organized. From simple todo lists to dependency-aware task boards shared across agents." },
+    "memory": { "label": "Memory Management", "desc": "Keeping context within limits. Compression strategies that let agents work infinitely without losing coherence." },
+    "concurrency": { "label": "Concurrency", "desc": "Non-blocking execution. Background threads and notification buses for parallel work." },
+    "collaboration": { "label": "Collaboration", "desc": "Multi-agent coordination. Teams, messaging, and autonomous teammates that think for themselves." }
   },
-  "layers.tools.label": "Tools & Execution",
-  "layers.planning.label": "Planning & Coordination",
-  "layers.memory.label": "Memory Management",
-  "layers.concurrency.label": "Concurrency",
-  "layers.collaboration.label": "Collaboration",
+  "layer_labels": {
+    "tools": "Tools & Execution",
+    "planning": "Planning & Coordination",
+    "memory": "Memory Management",
+    "concurrency": "Concurrency",
+    "collaboration": "Collaboration"
+  },
   "compare": {
     "title": "Compare Versions",
     "subtitle": "See what changed between any two versions",
