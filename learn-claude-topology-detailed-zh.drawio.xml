@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net" modified="2026-03-31" agent="OpenAI" version="14.6.0">
+  <diagram id="Topology-Detailed-CH" name="拓扑-详版-带边-Phase到子任务">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Phase 1: 循环与工具 -->
+        <mxCell id="ph1" value="Phase 1: 循环与工具" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDEEFF;strokeColor=#6C8BD3" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <!-- s01 - s02 -->
+        <mxCell id="s01" value="s01: 代理循环" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="60" y="110" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s02" value="s02: 工具调度" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Phase 2: 规划与知识 -->
+        <mxCell id="ph2" value="Phase 2: 规划与知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFD4;strokeColor=#4CAF50" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <!-- s03 - s06 -->
+        <mxCell id="s03" value="s03: 待办写作" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="110" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s04" value="s04: 子代理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="160" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s05" value="s05: 技能加载" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="210" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s06" value="s06: 上下文压缩" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="260" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Phase 3: 持久化 -->
+        <mxCell id="ph3" value="Phase 3: 持久化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6C1;strokeColor=#F39C12" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <!-- s07 - s08 -->
+        <mxCell id="s07" value="s07: 任务系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s08" value="s08: 后台任务" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Phase 4: 团队 -->
+        <mxCell id="ph4" value="Phase 4: 团队" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFD1E0;strokeColor=#E91E63" vertex="1" parent="1">
+          <mxGeometry x="420" y="320" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <!-- s09 - s12 -->
+        <mxCell id="s09" value="s09: 代理团队" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="390" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s10" value="s10: 团队协议" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="440" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s11" value="s11: 自主代理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="490" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="s12" value="s12: 工作树隔离" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000" vertex="1" parent="1">
+          <mxGeometry x="460" y="540" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- 边：Phase1 -> s01, s02 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph1" target="s01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph1" target="s02">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 边：Phase2 -> s03,s04,s05,s06 -->
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph2" target="s03">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph2" target="s04">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph2" target="s05">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph2" target="s06">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 边：Phase3 -> s07, s08 -->
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph3" target="s07">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph3" target="s08">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 边：Phase4 -> s09, s10, s11, s12 -->
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph4" target="s09">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph4" target="s10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph4" target="s11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1" edge="1" source="ph4" target="s12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
